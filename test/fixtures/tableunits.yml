@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  table_hash: MyString
+  status: 1
+  restaurant_id: 
+
+two:
+  table_hash: MyString
+  status: 1
+  restaurant_id: 

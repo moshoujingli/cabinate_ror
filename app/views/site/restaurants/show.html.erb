@@ -1,0 +1,31 @@
+<p>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</p>
+ 
+<p>
+  <strong>Status:</strong>
+  <%= @restaurant.status %>
+</p>
+
+<h2>tableunits</h2>
+<% @restaurant.tableunits.each do |tableunit| %>
+  <p>
+    <strong>status:</strong>
+    <%= tableunit.status %>
+  </p>
+<% end %>
+
+
+<h2>Add a Table:</h2>
+<%= form_for([@restaurant, @restaurant.tableunits.build]) do |f| %>
+  <p>
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', restaurants_path %>
+| <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
